@@ -1,0 +1,152 @@
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background:rgb(241, 245, 248);
+  line-height: 1.5;
+  font-size: 14px;
+}
+img:not(.logo) {
+  width: 100%;
+}
+img {
+  display: block;
+}
+
+h2,
+h4 {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 1.22;
+  margin-bottom: 6px;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+h2 {
+  font-size: 32px;
+}
+h4 {
+  font-size: 14px;
+}
+p {
+  margin-bottom: 20px;
+  color: rgb(49, 46, 8);
+}
+@media screen and (min-width: 800px) {
+  
+  h2 {
+    font-size: 40px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+  body {
+    font-size: 16px;
+  }
+  h2,
+  h4 {
+    line-height: 1;
+  }
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1160px;
+}
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.title p {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.about-img {
+  margin-bottom: 35px;
+}
+.about-img img {
+  border-radius: 5px;
+  object-fit: cover;
+  height: 300px;
+}
+@media screen and (min-width: 900px) {
+  .about-img {
+    margin-bottom: 0;
+  }
+
+  .about-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 32px;
+  }
+}
+.about {
+  background: #fff;
+  border-radius: 6px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.btn-container {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.tab-btn:nth-child(1) {
+  border-top-left-radius: 6px;
+}
+.tab-btn:nth-child(3) {
+  border-top-right-radius: 6px;
+}
+.tab-btn {
+  padding: 16px 0;
+  border: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  display: block;
+  background: rgb(178, 137, 41);
+  cursor: pointer;
+  transition: all 0.4s linear;
+  letter-spacing: 1px;
+}
+.tab-btn:hover:not(.active) {
+  background: rgb(107, 82, 8);
+  color: rgb(252, 254, 249);
+}
+.about-content {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  padding: 17px;
+}
+/* hide content */
+.content {
+  display: none;
+}
+.tab-btn.active {
+  background: #fff;
+}
+.content.active {
+  display: block;
+}
